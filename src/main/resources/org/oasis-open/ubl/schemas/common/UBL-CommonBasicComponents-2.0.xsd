@@ -386,6 +386,7 @@
   <xsd:element name="Room" type="RoomType"/>
   <xsd:element name="RoundingAmount" type="RoundingAmountType"/>
   <xsd:element name="SalesOrderID" type="SalesOrderIDType"/>
+  <xsd:element name="ProformaID" type="ProformaIDType"/>
   <xsd:element name="SalesOrderLineID" type="SalesOrderLineIDType"/>
   <xsd:element name="SchemeURI" type="SchemeURIType"/>
   <xsd:element name="SealingPartyType" type="SealingPartyTypeType"/>
@@ -2331,6 +2332,11 @@
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="SalesOrderIDType">
+    <xsd:simpleContent>
+      <xsd:extension base="udt:IdentifierType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ProformaIDType">
     <xsd:simpleContent>
       <xsd:extension base="udt:IdentifierType"/>
     </xsd:simpleContent>

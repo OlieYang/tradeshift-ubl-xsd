@@ -180,6 +180,7 @@
   <xsd:element name="OrderLine" type="OrderLineType"/>
   <xsd:element name="OrderLineReference" type="OrderLineReferenceType"/>
   <xsd:element name="OrderReference" type="OrderReferenceType"/>
+  <xsd:element name="ProformaReference" type="ProformaReferenceType"/>
   <xsd:element name="OriginAddress" type="AddressType"/>
   <xsd:element name="OriginalDepartureCountry" type="CountryType"/>
   <xsd:element name="OriginalDespatchParty" type="PartyType"/>
@@ -11110,7 +11111,22 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Line Reference</ccts:ObjectClass>
               <ccts:PropertyTerm>Order Reference</ccts:PropertyTerm>
-              <ccts:AssociatedObjectClass>Order Reference</ccts:AssociatedObjectClass>
+              <ccts:AssociatedObjectClass>Proforma Reference</ccts:AssociatedObjectClass>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="ProformaReference" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>ASBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Proforma Line Reference. Proforma Reference</ccts:DictionaryEntryName>
+              <ccts:Definition>An association to Order Reference.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Proforma Line Reference</ccts:ObjectClass>
+              <ccts:PropertyTerm>Proforma Reference</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Proforma Reference</ccts:AssociatedObjectClass>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -11147,6 +11163,151 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
         </xsd:annotation>
       </xsd:element>
       <xsd:element ref="cbc:SalesOrderID" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>BBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Order Reference. Sales Order Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies the referenced Order assigned by the seller.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+              <ccts:PropertyTerm>Sales Order Identifier</ccts:PropertyTerm>
+              <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+              <ccts:DataType>Identifier. Type</ccts:DataType>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>BBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Order Reference. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
+              <ccts:Definition>Indicates whether the referenced Order is a copy (true) or the original (false).</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+              <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
+              <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
+              <ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
+              <ccts:DataType>Indicator. Type</ccts:DataType>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>BBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Order Reference. UUID. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+              <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
+              <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+              <ccts:DataType>Identifier. Type</ccts:DataType>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="cbc:IssueDate" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>BBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Order Reference. Issue Date. Date</ccts:DictionaryEntryName>
+              <ccts:Definition>The date on which the referenced Order was issued.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+              <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
+              <ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+              <ccts:DataType>Date. Type</ccts:DataType>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>BBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Order Reference. Issue Time. Time</ccts:DictionaryEntryName>
+              <ccts:Definition>The time at which the referenced Order was issued.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+              <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
+              <ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
+              <ccts:DataType>Time. Type</ccts:DataType>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="cbc:CustomerReference" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>BBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Order Reference. Customer_ Reference. Text</ccts:DictionaryEntryName>
+              <ccts:Definition>A reference used (CRI) for tagging purchasing card transactions.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+              <ccts:PropertyTermQualifier>Customer</ccts:PropertyTermQualifier>
+              <ccts:PropertyTerm>Reference</ccts:PropertyTerm>
+              <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+              <ccts:DataType>Text. Type</ccts:DataType>
+              <ccts:Examples>Customer Reference Identifier (CRI) when using a puchasing card</ccts:Examples>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="DocumentReference" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>ASBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Order Reference. Document Reference</ccts:DictionaryEntryName>
+              <ccts:Definition>An association to Document Reference.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+              <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ProformaReferenceType">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:Component>
+          <ccts:ComponentType>ABIE</ccts:ComponentType>
+          <ccts:DictionaryEntryName>Order Reference. Details</ccts:DictionaryEntryName>
+          <ccts:Definition>Information about an Order Reference.</ccts:Definition>
+          <ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+        </ccts:Component>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>BBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Order Reference. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies the referenced Order assigned by the buyer.</ccts:Definition>
+              <ccts:Cardinality>1</ccts:Cardinality>
+              <ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+              <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+              <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+              <ccts:DataType>Identifier. Type</ccts:DataType>
+              <ccts:Examples>"PO-001" "3333-44-123"</ccts:Examples>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="cbc:ProformaID" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>

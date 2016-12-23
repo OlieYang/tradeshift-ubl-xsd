@@ -460,6 +460,21 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element ref="cac:ProformaReference" minOccurs="1" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>ASBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Proforma Response. Proforma Reference</ccts:DictionaryEntryName>
+              <ccts:Definition>An association to Proforma Reference (the reference of the Proforma being responded to).</ccts:Definition>
+              <ccts:Cardinality>1..n</ccts:Cardinality>
+              <ccts:ObjectClass>Proforma Response</ccts:ObjectClass>
+              <ccts:PropertyTerm>Proforma Reference</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Proforma Reference</ccts:AssociatedObjectClass>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="cac:OrderDocumentReference" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
           <xsd:documentation>
