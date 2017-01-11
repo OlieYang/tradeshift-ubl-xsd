@@ -141,6 +141,8 @@
   <xsd:element name="InvoiceDocumentReference" type="DocumentReferenceType"/>
   <xsd:element name="InvoiceLine" type="InvoiceLineType"/>
   <xsd:element name="ProformaLine" type="ProformaLineType"/>
+  <xsd:element name="ProformaReference" type="DocumentReferenceType"/>
+  <xsd:element name="ProformaLineReference" type="ProformaLineReferenceType"/>
   <xsd:element name="InvoicePeriod" type="PeriodType"/>
   <xsd:element name="IssuerEndorsement" type="EndorsementType"/>
   <xsd:element name="IssuerParty" type="PartyType"/>
@@ -6104,6 +6106,83 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
+  <xsd:complexType name="ProformaLineReferenceType">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:Component>
+          <ccts:ComponentType>ABIE</ccts:ComponentType>
+          <ccts:DictionaryEntryName>Proforma Line Reference. Details</ccts:DictionaryEntryName>
+          <ccts:Definition>Information about an Proforma Line Reference.</ccts:Definition>
+          <ccts:ObjectClass>Proforma Line Reference</ccts:ObjectClass>
+        </ccts:Component>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="cbc:LineID" minOccurs="1" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>BBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Proforma Line Reference. Line Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies the referenced Proforma Line assigned by the seller.</ccts:Definition>
+              <ccts:Cardinality>1</ccts:Cardinality>
+              <ccts:ObjectClass>Proforma Line Reference</ccts:ObjectClass>
+              <ccts:PropertyTerm>Line Identifier</ccts:PropertyTerm>
+              <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+              <ccts:DataType>Identifier. Type</ccts:DataType>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>BBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Proforma Line Reference. UUID. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Proforma Line Reference</ccts:ObjectClass>
+              <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
+              <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+              <ccts:DataType>Identifier. Type</ccts:DataType>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="cbc:LineStatusCode" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>BBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Proforma Line Reference. Line Status Code. Code</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies the status of the referenced Proforma Line with respect to its original state.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Proforma Line Reference</ccts:ObjectClass>
+              <ccts:PropertyTerm>Line Status Code</ccts:PropertyTerm>
+              <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+              <ccts:DataType>Line Status_ Code. Type</ccts:DataType>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="ProformaReference" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>ASBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Proforma Line Reference. Proforma Reference</ccts:DictionaryEntryName>
+              <ccts:Definition>An association to Proforma Reference.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Proforma Line Reference</ccts:ObjectClass>
+              <ccts:PropertyTerm>Proforma Reference</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Proforma Reference</ccts:AssociatedObjectClass>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
   <xsd:complexType name="DocumentResponseType">
     <xsd:annotation>
       <xsd:documentation>
@@ -7898,13 +7977,29 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
       <xsd:documentation>
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
-          <ccts:DictionaryEntryName>Invoice Line. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>Information about an Invoice Line.</ccts:Definition>
-          <ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
+          <ccts:DictionaryEntryName>Proforma Line. Details</ccts:DictionaryEntryName>
+          <ccts:Definition>Information about an Proforma Line.</ccts:Definition>
+          <ccts:ObjectClass>Proforma Line</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
+      <xsd:element ref="cbc:SubstitutionStatusCode" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>BBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Proforma Line. Substitution Status Code. Code</ccts:DictionaryEntryName>
+              <ccts:Definition>A code indicating the substitution status of the Proforma Line. Proforma Line may indicate that a substitute is proposed by the seller or by the buyer (in Proforma Response) or that a substitution has been made by the buyer (in Proforma Response).</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Proforma Line</ccts:ObjectClass>
+              <ccts:PropertyTerm>Substitution Status Code</ccts:PropertyTerm>
+              <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+              <ccts:DataType>Substitution Status_ Code. Type</ccts:DataType>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
@@ -8047,6 +8142,21 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
               <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
               <ccts:DataType>Indicator. Type</ccts:DataType>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="ProformaLineReference" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>ASBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Proforma Line. Proforma Line Reference</ccts:DictionaryEntryName>
+              <ccts:Definition>An association to Proforma Line Reference.</ccts:Definition>
+              <ccts:Cardinality>0..n</ccts:Cardinality>
+              <ccts:ObjectClass>Proforma Line</ccts:ObjectClass>
+              <ccts:PropertyTerm>Proforma Line Reference</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Proforma Line Reference</ccts:AssociatedObjectClass>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
