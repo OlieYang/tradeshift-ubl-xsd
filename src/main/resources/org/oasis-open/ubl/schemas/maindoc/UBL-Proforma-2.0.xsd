@@ -392,6 +392,21 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element ref="cac:ProformaReference" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>ASBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Proforma Change. Proforma Reference</ccts:DictionaryEntryName>
+              <ccts:Definition>An association to Proforma Reference.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Proforma Change</ccts:ObjectClass>
+              <ccts:PropertyTerm>Proforma Reference</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Proforma Reference</ccts:AssociatedObjectClass>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="cac:BillingReference" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
           <xsd:documentation>
