@@ -302,6 +302,10 @@
   <xsd:element name="ValidityPeriod" type="PeriodType"/>
   <xsd:element name="WarrantyParty" type="PartyType"/>
   <xsd:element name="WarrantyValidityPeriod" type="PeriodType"/>
+  <xsd:element name="InvoiceNumber" type="InvoiceNumberType" />
+  <xsd:element name="InvoiceCode" type="InvoiceCodeType" />
+  <xsd:element name="CheckCode" type="CheckCodeType" />
+  <xsd:element name="ReviewerParty" type="PartyType"/>
 <!-- ===== Type Definitions ===== -->
 <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
   <xsd:complexType name="AddressType">
@@ -17923,6 +17927,21 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InvoiceNumberType">
+    <xsd:simpleContent>
+      <xsd:extension base="udt:IdentifierType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="InvoiceCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="udt:CodeType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="CheckCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="udt:CodeType"/>
+    </xsd:simpleContent>
   </xsd:complexType>
 </xsd:schema>
 <!-- ===== Copyright Notice ===== -->
