@@ -142,6 +142,7 @@
   <xsd:element name="InvoiceLine" type="InvoiceLineType"/>
   <xsd:element name="ProformaLine" type="ProformaLineType"/>
   <xsd:element name="ProformaReference" type="DocumentReferenceType"/>
+  <xsd:element name="FapiaoReference" type="DocumentReferenceType"/>
   <xsd:element name="ProformaLineReference" type="ProformaLineReferenceType"/>
   <xsd:element name="InvoicePeriod" type="PeriodType"/>
   <xsd:element name="IssuerEndorsement" type="EndorsementType"/>
