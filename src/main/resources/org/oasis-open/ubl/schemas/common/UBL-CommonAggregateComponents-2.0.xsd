@@ -181,6 +181,7 @@
   <xsd:element name="OrderDocumentReference" type="DocumentReferenceType"/>
   <xsd:element name="OrderedShipment" type="OrderedShipmentType"/>
   <xsd:element name="OrderLine" type="OrderLineType"/>
+  <xsd:element name="ReconciliationLine" type="OrderLineType"/>
   <xsd:element name="OrderLineReference" type="OrderLineReferenceType"/>
   <xsd:element name="OrderReference" type="OrderReferenceType"/>
   <xsd:element name="OriginAddress" type="AddressType"/>
