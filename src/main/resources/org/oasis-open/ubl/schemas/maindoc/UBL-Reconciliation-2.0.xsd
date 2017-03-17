@@ -37,7 +37,7 @@
           <ccts:DictionaryEntryName>Reconciliation. Details</ccts:DictionaryEntryName>
           <ccts:Definition>The document used to describe the reconciliation infos.</ccts:Definition>
           <ccts:ObjectClass>Reconciliation</ccts:ObjectClass>
-          <ccts:AlternativeBusinessTerms>Purchase Reconciliation</ccts:AlternativeBusinessTerms>
+          <ccts:AlternativeBusinessTerms>Reconciliation</ccts:AlternativeBusinessTerms>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
@@ -110,7 +110,7 @@
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
-              <ccts:AlternativeBusinessTerms>Purchase Reconciliation Number, Reconciliation Number</ccts:AlternativeBusinessTerms>
+              <ccts:AlternativeBusinessTerms>Reconciliation Number, Reconciliation Number</ccts:AlternativeBusinessTerms>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
