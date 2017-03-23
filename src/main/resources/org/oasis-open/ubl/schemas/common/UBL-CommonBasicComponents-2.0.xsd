@@ -80,6 +80,9 @@
   <xsd:element name="CitySubdivisionName" type="CitySubdivisionNameType"/>
   <xsd:element name="ClassifiedIndicator" type="ClassifiedIndicatorType"/>
   <xsd:element name="CodeValue" type="CodeValueType"/>
+  <xsd:element name="FapiaoCodeValue" type="CodeValueType"/>
+  <xsd:element name="FapiaoNumValue" type="CodeValueType"/>
+  <xsd:element name="FapiaoVerificationCodeValue" type="CodeValueType"/>
   <xsd:element name="CommodityCode" type="CommodityCodeType"/>
   <xsd:element name="CompanyID" type="CompanyIDType"/>
   <xsd:element name="CompletionIndicator" type="CompletionIndicatorType"/>
