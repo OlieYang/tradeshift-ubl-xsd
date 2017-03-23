@@ -501,6 +501,22 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element ref="cac:ReconciliationDocumentReference" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>ASBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>ApBundle. Reconciliation_ Document Reference. Document Reference</ccts:DictionaryEntryName>
+              <ccts:Definition>An associative reference to Reconciliation Document.</ccts:Definition>
+              <ccts:Cardinality>0..n</ccts:Cardinality>
+              <ccts:ObjectClass>ApBundle</ccts:ObjectClass>
+              <ccts:PropertyTermQualifier>Reconciliation</ccts:PropertyTermQualifier>
+              <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
           <xsd:documentation>
@@ -798,7 +814,7 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cac:InvoiceLine" minOccurs="1" maxOccurs="unbounded">
+      <xsd:element ref="cac:ApBundleLine" minOccurs="1" maxOccurs="unbounded">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
